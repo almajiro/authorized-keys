@@ -53,3 +53,4 @@ fabric.properties
 authorized_keys*
 test.php
 .phpunit*
+composer.lock
