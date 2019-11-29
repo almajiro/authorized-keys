@@ -38,7 +38,7 @@ object(Almajiro\AuthorizedKeys\AuthorizedKeys)#1 (1) {
     [0]=>
     object(Almajiro\AuthorizedKeys\Entities\PublicKey)#2 (4) {
       ["key":"Almajiro\AuthorizedKeys\Entities\PublicKey":private]=>
-      string(372) "AAAAB3NzaC1yc2EAAAADAQABAAABAQDZd6ljNmzMmw3PEJR169zc5lfeB7Q2XhyIgy6RwyRXg2i8vKzDYUvfrQlroUmEbD2zVuvm82wCOViLuDFXu37Kw91WjT7FNl/uSu/QBk/a6y55uVpmHXsgJY5c4p7GohJ2VcgLff2oeK8XSqvhRlcW0t05SMbqLOk5Osv+7AXqDW+ypjUH5KjN5yxhgYuOMIXacUT2yp3KfDnUaYnJavdHDvxv9jPqV9LCl8X0PRAi+26qsJmnyI/jK9yCDieIT2VrhZpShiRVlTfZuWqs9G+zkklUy04cLub2tEWy+O/6lrDLu3SmgHyCZode+PYIGsHsrU8TlSBLsYBN0DTLntfz"
+      string(372) "AAAAB3NzaC1yc2EAAAADAQABAAABAQDZd6ljNm..."
       ["type":"Almajiro\AuthorizedKeys\Entities\PublicKey":private]=>
       string(7) "ssh-rsa"
       ["options":"Almajiro\AuthorizedKeys\Entities\PublicKey":private]=>
