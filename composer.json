@@ -8,7 +8,8 @@
         }
     ],
     "require": {
-        "php": "^7.0"
+        "php": "^7.0",
+        "php-coveralls/php-coveralls": "^2.2"
     },
     "autoload": {
         "psr-4": {
@@ -16,7 +17,6 @@
         }
     },
     "require-dev": {
-        "phpunit/phpunit": "^8.4",
-        "satooshi/php-coveralls": "^2.2"
+        "phpunit/phpunit": "^8.4"
     }
 }

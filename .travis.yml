@@ -11,7 +11,7 @@ script:
   - mkdir -p build/logs
   - php vendor/bin/phpunit
 after_script:
-  - php vendor/bin/coveralls -v
+  - php vendor/bin/php-coveralls
 notifications:
   slack:
     secure: a1PcJ4EQfeh3/fGex0i7d0FBimYBeAHhgWY5NzqL8VFygEIjjZL7PXZFby8jeuHi1ATb+cUcFbO+TNKzl9A2jwg5sbZRCm0HEQ47i2il09hA/04Gf3KX2ROAD6zDKBey0pVEpmYl8IF7j3vAgyxnDHkvSQsLJp4yGMO390YqOOy1mhqzBGzTLQee1pfV1Myn2nysbGSkc3a7YzGdPoGR5rxN3S93WgWPn9VNLH8kVkLt5x5bDct9g9e4GEKHsl/E4nTP9M2cfPerYQpgDFS4fxFH/K4MQ8FYnNKYLChmFHoFcS8PGWhii/xvHxr39hkuhHzwOWjWHPTTY0oLkuuy/AjqrusZcfdZfSEO+7qQE8ogOr5sqv1tmPA+iHJynBaXR3rriL1SAP23hfLp9cx2hhI5XgjPNmk9S/NF1/ARvNsJYEo43Vp2jgbIY3wbICwrAVV9ehWcJFzlOLLYCtvmGKENVfxlh18YtFZW168RK6j/AY2gL5m+u7ZK4R52XtpXI9yuD6skyHhsFeuqxaha8J02A1HxQ0OvZ7sNb1Io8Gh+77ux8EYQ7H/+3Zho2oUgMbTQ1O0cwlFaaSKyjhgn+IPx0Wvq9Etl7eVntFQzJ70PUAw+wEhQsyv4DFz3C75Cp9eJJ7alCcTN6fCnfW0Z6XzSmj4PgwPOzIDJmgTr1y8=
