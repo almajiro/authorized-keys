@@ -1,7 +1,9 @@
 Authorized Keys
 ======
 
-[![StyleCI](https://github.styleci.io/repos/224173581/shield?branch=master)](https://github.styleci.io/repos/224173581)[![Build Status](https://travis-ci.org/almajiro/authorized-keys.svg?branch=master)](https://travis-ci.org/almajiro/authorized-keys)[![Coverage Status](https://coveralls.io/repos/github/almajiro/authorized-keys/badge.svg?branch=master)](https://coveralls.io/github/almajiro/authorized-keys?branch=master)
+[![StyleCI](https://github.styleci.io/repos/224173581/shield?branch=master)](https://github.styleci.io/repos/224173581)
+[![Build Status](https://travis-ci.org/almajiro/authorized-keys.svg?branch=master)](https://travis-ci.org/almajiro/authorized-keys)
+[![Coverage Status](https://coveralls.io/repos/github/almajiro/authorized-keys/badge.svg?branch=master)](https://coveralls.io/github/almajiro/authorized-keys?branch=master)
 
 Manage SSH `authorized_keys`
 
