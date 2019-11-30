@@ -54,6 +54,11 @@ class AuthorizedKeys
         return $rawData;
     }
 
+    public function __toString()
+    {
+        return $this->generate();
+    }
+
     private function toEntry(PublicKey $publicKey)
     {
         $entry = '';
