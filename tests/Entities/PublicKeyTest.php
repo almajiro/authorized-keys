@@ -126,4 +126,40 @@ class PublicKeyTest extends TestCase
 
         $this->assertEquals($option, $publicKey->getOptions()[0]);
     }
+
+    /**
+     * @test
+     */
+    public function setKey()
+    {
+        $expectedKey = 'new-key';
+        $publicKey = $this->create();
+        $publicKey->setKey($expectedKey);
+
+        $this->assertEquals($expectedKey, $publicKey->getKey());
+    }
+
+    /**
+     * @test
+     */
+    public function setType()
+    {
+        $expectedType = 'ssh-dsa';
+        $publicKey = $this->create();
+        $publicKey->setType($expectedType);
+
+        $this->assertEquals($expectedType, $publicKey->getType());
+    }
+
+    /**
+     * @test
+     */
+    public function setComment()
+    {
+        $expectedComment = 'new_comment';
+        $publicKey = $this->create();
+        $publicKey->setComment($expectedComment);
+
+        $this->assertEquals($expectedComment, $publicKey->getComment());
+    }
 }
