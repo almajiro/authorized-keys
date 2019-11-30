@@ -2,9 +2,11 @@
 
 use PHPUnit\Framework\TestCase;
 use Almajiro\AuthorizedKeys\Entities\PublicKey;
+use Almajiro\AuthorizedKeys\Entities\Options\Tunnel;
 use Almajiro\AuthorizedKeys\Entities\Options\Command;
 use Almajiro\AuthorizedKeys\Entities\Options\NoPty;
 use Almajiro\AuthorizedKeys\Entities\Options\NoAgentForwarding;
+use Almajiro\AuthorizedKeys\Entities\Options\NoX11Forwarding;
 use Almajiro\AuthorizedKeys\Entities\Options\NoPortForwarding;
 
 class PublicKeyTest extends TestCase
@@ -70,6 +72,36 @@ class PublicKeyTest extends TestCase
     {
         $publicKey = $this->create();
         $option = new NoPortForwarding();
+
+        $publicKey->setOptions([
+            $option
+        ]);
+
+        $this->assertEquals($option, $publicKey->getOptions()[0]);
+    }
+
+    /**
+     * @test
+     */
+    public function SetNoX11ForwardingOption()
+    {
+        $publicKey = $this->create();
+        $option = new NoX11Forwarding();
+
+        $publicKey->setOptions([
+            $option
+        ]);
+
+        $this->assertEquals($option, $publicKey->getOptions()[0]);
+    }
+
+    /**
+     * @test
+     */
+    public function setTunnelOption()
+    {
+        $publicKey = $this->create();
+        $option = new Tunnel(1);
 
         $publicKey->setOptions([
             $option
