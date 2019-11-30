@@ -43,7 +43,7 @@ class AuthorizedKeys
         fclose($resource);
 
         if ($setPermission) {
-            chmod($authorizedKeys, 600);
+            chmod($authorizedKeys, 0600);
         }
 
         return true;
