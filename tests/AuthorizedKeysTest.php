@@ -2,10 +2,10 @@
 
 namespace Tests;
 
-use org\bovigo\vfs\vfsStream;
-use PHPUnit\Framework\TestCase;
 use Almajiro\AuthorizedKeys\AuthorizedKeys;
 use Almajiro\AuthorizedKeys\Entities\PublicKey;
+use org\bovigo\vfs\vfsStream;
+use PHPUnit\Framework\TestCase;
 
 class AuthorizedKeysTest extends TestCase
 {

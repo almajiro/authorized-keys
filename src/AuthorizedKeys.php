@@ -96,7 +96,7 @@ class AuthorizedKeys
         return $entry;
     }
 
-    static public function open(string $authorizedKeys)
+    public static function open(string $authorizedKeys)
     {
         $resource = fopen($authorizedKeys, 'r');
         $rawData = fread($resource, filesize($authorizedKeys));

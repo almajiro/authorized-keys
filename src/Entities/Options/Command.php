@@ -13,7 +13,7 @@ class Command extends AbstractOption
 
     public function __toString()
     {
-        $command = preg_replace("/\"/", '\\"', $this->command);
+        $command = preg_replace('/"/', '\\"', $this->command);
 
         return 'command="'.$command.'"';
     }
