@@ -144,7 +144,7 @@ class PublicKeyTest extends TestCase
      */
     public function setType()
     {
-        $expectedType = 'ssh-dsa';
+        $expectedType = 'ssh-dss';
         $publicKey = $this->create();
         $publicKey->setType($expectedType);
 

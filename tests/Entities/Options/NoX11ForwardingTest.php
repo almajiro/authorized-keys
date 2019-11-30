@@ -11,7 +11,7 @@ class NoX11ForwardingTest extends OptionTest
      */
     public function toOption()
     {
-        $expectedResult = 'no-x11-forwarding';
+        $expectedResult = 'no-X11-forwarding';
         $option = new NoX11Forwarding();
 
         $this->assertEquals($expectedResult, $option->__toString());
