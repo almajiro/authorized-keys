@@ -42,7 +42,6 @@ ssh-rsa ABCDE
 
 __EOF__;
 
-
         $directory = vfsStream::setup();
         $file = vfsStream::newFile('authorized_keys')
             ->at($directory);

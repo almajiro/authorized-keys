@@ -110,7 +110,7 @@ class AuthorizedKeys
         $keys = [];
         $lines = explode("\n", $rawData);
         foreach ($lines as $line) {
-            if (preg_match('/^(?:(.+) )?('.implode('|', self::ALLOWED_TYPES).') ([^ ]+) ?(.*)$/',$line, $matches)) {
+            if (preg_match('/^(?:(.+) )?('.implode('|', self::ALLOWED_TYPES).') ([^ ]+) ?(.*)$/', $line, $matches)) {
                 $options = $matches[1];
                 $type = $matches[2];
                 $key = $matches[3];
