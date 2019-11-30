@@ -13,7 +13,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Almajiro\\AuthorizedKeys\\": "src/"
+            "Almajiro\\AuthorizedKeys\\": "src/",
+            "Tests\\": "tests/"
         }
     },
     "require-dev": {

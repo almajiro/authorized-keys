@@ -1,5 +1,7 @@
 <?php
 
+namespace Tests;
+
 use PHPUnit\Framework\TestCase;
 use Almajiro\AuthorizedKeys\Entities\PublicKey;
 use Almajiro\AuthorizedKeys\Entities\Options\Tunnel;
