@@ -6,6 +6,6 @@ class NoX11Forwarding extends AbstractOption
 {
     public function __toString()
     {
-        return 'no-x11-forwarding';
+        return 'no-X11-forwarding';
     }
 }
