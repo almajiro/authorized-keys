@@ -1,9 +1,11 @@
 Authorized Keys
 ======
 
+[![Build Status](https://travis-ci.org/almajiro/authorized-keys.svg?branch=master)](https://travis-ci.org/almajiro/authorized-keys)
+
 Manage SSH `authorized_keys`
 
-# Installation (Coming soon)
+# Installation
 
 ```shell
 composer require almajiro/authorized-keys
