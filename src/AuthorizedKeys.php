@@ -2,13 +2,13 @@
 
 namespace Almajiro\AuthorizedKeys;
 
-use Almajiro\AuthorizedKeys\Entities\Options\Tunnel;
-use Almajiro\AuthorizedKeys\Entities\PublicKey;
-use Almajiro\AuthorizedKeys\Entities\Options\NoPty;
 use Almajiro\AuthorizedKeys\Entities\Options\Command;
 use Almajiro\AuthorizedKeys\Entities\Options\NoAgentForwarding;
 use Almajiro\AuthorizedKeys\Entities\Options\NoPortForwarding;
+use Almajiro\AuthorizedKeys\Entities\Options\NoPty;
 use Almajiro\AuthorizedKeys\Entities\Options\NoX11Forwarding;
+use Almajiro\AuthorizedKeys\Entities\Options\Tunnel;
+use Almajiro\AuthorizedKeys\Entities\PublicKey;
 
 class AuthorizedKeys
 {
@@ -20,7 +20,7 @@ class AuthorizedKeys
         'ssh-rsa',
         'ecdsa-sha2-nistp256',
         'ecdsa-sha2-nistp384',
-        'ecdsa-sha2-nistp521'
+        'ecdsa-sha2-nistp521',
     ];
 
     public function __construct(array $keys = [])
@@ -31,6 +31,7 @@ class AuthorizedKeys
     public function add(PublicKey $key)
     {
         $this->keys[] = $key;
+
         return $this;
     }
 
@@ -54,7 +55,7 @@ class AuthorizedKeys
         $rawData = '';
 
         foreach ($this->keys as $key) {
-            $rawData .= $this->toEntry($key) . "\n";
+            $rawData .= $this->toEntry($key)."\n";
         }
 
         return $rawData;
@@ -75,7 +76,7 @@ class AuthorizedKeys
         foreach ($options as $option) {
             $rawOption .= $option->__toString();
 
-            if ($counter != (count($options) -1)) {
+            if ($counter != (count($options) - 1)) {
                 $rawOption .= ',';
             }
 
@@ -83,13 +84,13 @@ class AuthorizedKeys
         }
 
         if ($rawOption) {
-            $entry = $rawOption . ' ';
+            $entry = $rawOption.' ';
         }
 
-        $entry .= $publicKey->getType() . ' ' . $publicKey->getKey();
+        $entry .= $publicKey->getType().' '.$publicKey->getKey();
 
         if ($publicKey->getComment()) {
-            $entry .= ' ' . $publicKey->getComment();
+            $entry .= ' '.$publicKey->getComment();
         }
 
         return $entry;
@@ -104,12 +105,12 @@ class AuthorizedKeys
         return new static(self::parse($rawData));
     }
 
-    static private function parse($rawData)
+    private static function parse($rawData)
     {
         $keys = [];
         $lines = explode("\n", $rawData);
         foreach ($lines as $line) {
-            if (preg_match('/^(?:(.+) )?(' . implode('|', self::ALLOWED_TYPES) .') ([^ ]+) ?(.*)$/',$line, $matches)) {
+            if (preg_match('/^(?:(.+) )?('.implode('|', self::ALLOWED_TYPES).') ([^ ]+) ?(.*)$/',$line, $matches)) {
                 $options = $matches[1];
                 $type = $matches[2];
                 $key = $matches[3];
@@ -122,7 +123,7 @@ class AuthorizedKeys
         return $keys;
     }
 
-    static private function parseOption($rawOptions)
+    private static function parseOption($rawOptions)
     {
         $options = [];
 

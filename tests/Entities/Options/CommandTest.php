@@ -12,7 +12,7 @@ class CommandTest extends OptionTest
     public function toOption()
     {
         $expectedCommand = 'ls -la';
-        $expectedResult = 'command="' . $expectedCommand . '"';
+        $expectedResult = 'command="'.$expectedCommand.'"';
         $option = new Command($expectedCommand);
 
         $this->assertEquals($expectedResult, $option->__toString());

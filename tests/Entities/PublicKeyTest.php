@@ -2,14 +2,14 @@
 
 namespace Tests;
 
-use PHPUnit\Framework\TestCase;
-use Almajiro\AuthorizedKeys\Entities\PublicKey;
-use Almajiro\AuthorizedKeys\Entities\Options\Tunnel;
 use Almajiro\AuthorizedKeys\Entities\Options\Command;
-use Almajiro\AuthorizedKeys\Entities\Options\NoPty;
 use Almajiro\AuthorizedKeys\Entities\Options\NoAgentForwarding;
-use Almajiro\AuthorizedKeys\Entities\Options\NoX11Forwarding;
 use Almajiro\AuthorizedKeys\Entities\Options\NoPortForwarding;
+use Almajiro\AuthorizedKeys\Entities\Options\NoPty;
+use Almajiro\AuthorizedKeys\Entities\Options\NoX11Forwarding;
+use Almajiro\AuthorizedKeys\Entities\Options\Tunnel;
+use Almajiro\AuthorizedKeys\Entities\PublicKey;
+use PHPUnit\Framework\TestCase;
 
 class PublicKeyTest extends TestCase
 {
@@ -46,7 +46,7 @@ class PublicKeyTest extends TestCase
         $command = new Command('ls');
 
         $publicKey->setOptions([
-            $command
+            $command,
         ]);
 
         $this->assertEquals($command, $publicKey->getOptions()[0]);
@@ -61,7 +61,7 @@ class PublicKeyTest extends TestCase
         $option = new NoAgentForwarding();
 
         $publicKey->setOptions([
-            $option
+            $option,
         ]);
 
         $this->assertEquals($option, $publicKey->getOptions()[0]);
@@ -76,7 +76,7 @@ class PublicKeyTest extends TestCase
         $option = new NoPortForwarding();
 
         $publicKey->setOptions([
-            $option
+            $option,
         ]);
 
         $this->assertEquals($option, $publicKey->getOptions()[0]);
@@ -91,7 +91,7 @@ class PublicKeyTest extends TestCase
         $option = new NoX11Forwarding();
 
         $publicKey->setOptions([
-            $option
+            $option,
         ]);
 
         $this->assertEquals($option, $publicKey->getOptions()[0]);
@@ -106,7 +106,7 @@ class PublicKeyTest extends TestCase
         $option = new Tunnel(1);
 
         $publicKey->setOptions([
-            $option
+            $option,
         ]);
 
         $this->assertEquals($option, $publicKey->getOptions()[0]);
@@ -121,7 +121,7 @@ class PublicKeyTest extends TestCase
         $option = new NoPty();
 
         $publicKey->setOptions([
-            $option
+            $option,
         ]);
 
         $this->assertEquals($option, $publicKey->getOptions()[0]);

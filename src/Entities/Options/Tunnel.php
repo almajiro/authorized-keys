@@ -13,6 +13,6 @@ class Tunnel extends AbstractOption
 
     public function __toString()
     {
-        return 'tunnel="'. $this->number . '"';
+        return 'tunnel="'.$this->number.'"';
     }
 }

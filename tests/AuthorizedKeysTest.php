@@ -9,7 +9,7 @@ use Almajiro\AuthorizedKeys\Entities\PublicKey;
 
 class AuthorizedKeysTest extends TestCase
 {
-    private $testContent = <<< __EOF__
+    private $testContent = <<< '__EOF__'
 command="ls",no-agent-forwarding ssh-rsa ABCDEFG test@localhost.com
 ssh-dss HIJK test2@globalhost.com
 tunnel="2" ssh-rsa OKOK test@localhost
@@ -29,7 +29,7 @@ __EOF__;
             ->at($directory);
 
         $keys = AuthorizedKeys::open($file->url());
-        $this->assertEquals($this->testContent, (string)$keys);
+        $this->assertEquals($this->testContent, (string) $keys);
     }
 
     /**
@@ -37,7 +37,7 @@ __EOF__;
      */
     public function saveToFile()
     {
-        $expectedContent = <<<__EOF__
+        $expectedContent = <<< '__EOF__'
 ssh-rsa ABCDE
 
 __EOF__;

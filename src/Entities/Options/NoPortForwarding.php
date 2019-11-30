@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Almajiro\AuthorizedKeys\Entities\Options;
 
 class NoPortForwarding extends AbstractOption

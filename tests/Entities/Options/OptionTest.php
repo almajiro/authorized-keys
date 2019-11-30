@@ -2,8 +2,8 @@
 
 namespace Tests\Entities\Options;
 
-use PHPUnit\Framework\TestCase;
 use Almajiro\AuthorizedKeys\Entities\PublicKey;
+use PHPUnit\Framework\TestCase;
 
 abstract class OptionTest extends TestCase
 {
