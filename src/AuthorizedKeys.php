@@ -28,6 +28,12 @@ class AuthorizedKeys
         $this->keys = $keys;
     }
 
+    public function add(PublicKey $key)
+    {
+        $this->keys[] = $key;
+        return $this;
+    }
+
     public function save(string $authorizedKeys, bool $setPermission = true)
     {
         $rawData = $this->generate();
