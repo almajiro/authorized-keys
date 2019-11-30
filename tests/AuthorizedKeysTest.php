@@ -32,6 +32,9 @@ __EOF__;
         $this->assertEquals($this->testContent, (string)$keys);
     }
 
+    /**
+     * @test
+     */
     public function saveToFile()
     {
         $expectedContent = <<<__EOF__
